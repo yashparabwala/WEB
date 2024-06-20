@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>slide</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        body{
+            width: 100vw;
+            height: 100vh;
+            display: grid;
+            align-items: center;
+            justify-items: center;
+            background-color: black;
+        }
+        .ani{
+            font-size: 50px;
+            font-weight: 600;
+            color: aliceblue;
+            position: relative;
+            font-family: monospace; /* Monospace font for consistent width */
+            line-height: 1; /* Ensure line height matches the font size */
+        }
+        .ani::before{
+            content: "Yash Parabwala";
+            position: absolute;
+            top: 0;
+            left: 0;
+            color: orange;
+            border-right: 2px solid orange;
+            overflow: hidden;
+            white-space: nowrap;
+            animation: name 1s linear infinite alternate;
+        }
+        @keyframes name{
+            0%{
+                width: 0;
+            }
+            100%{
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="ani">Yash Parabwala</div>
+</body>
+</html>

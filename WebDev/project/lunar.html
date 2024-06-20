@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>lunar</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            width: 100vw;
+            height: 100vh;    
+            display: grid;
+            place-items: center;
+        }
+        .sky{
+            width: 40vw;
+            aspect-ratio: 1;
+            background-color: rgb(239, 205, 96);   
+            display: grid;
+            place-items: center;
+            animation: sky 10s ease-in-out  infinite  ;
+        }
+        .sun{
+            position: relative;
+            width: 25vw;
+            aspect-ratio: 1;
+            border-radius: 50%;
+            background-color: orange;
+            overflow: hidden;
+            &::after{
+                position: absolute;
+                content: "";
+                width: inherit;
+                aspect-ratio: 1;
+                background-color: black;
+                border-radius: 50%;
+                animation: moon 10s ease-in-out  infinite  ;
+                
+            }
+
+        }
+        @keyframes moon{
+            0%{
+                translate:100%;
+                scale: 100%;
+            }
+            50%{
+                translate: 0%;
+                scale: 0.95;
+            }
+            100%{
+                translate: -100%;
+                scale: 100%;
+            }
+        }
+        @keyframes sky{
+            50%{
+                background-color: rgb(92, 55, 22);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="sky">
+        <div class="sun"></div>
+    </div>
+</body>
+</html>
