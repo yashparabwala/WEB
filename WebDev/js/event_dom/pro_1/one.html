@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Listener</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        body {
+            background-color: aliceblue;
+        }
+        h1 {
+            text-align: center;
+            color: teal;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        }
+        p {
+            text-align: center;
+            color: rgb(6, 6, 7);
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        }
+        #btn-div {
+            margin: 50px;
+            display: grid;
+            place-items: center;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 20px;
+        }
+        button {
+            padding: 20px;
+            border-radius: 10px;
+            border: 1.8px solid;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            background-color: white;
+        }
+        #red button {
+            background-color: #E31837;
+        }
+        #blue button {
+            background-color: #009ACD;
+        }
+        #black button {
+            background-color: black;
+            color: aliceblue;
+        }
+        #cyan button {
+            background-color: #80FFFF;
+        }
+    </style>
+</head>
+<body>
+    <h1>First javascript project</h1>
+    <p>Click Button to change color</p>
+    <div id="btn-div">
+        <div id="white" class="button" ><button> White </button></div>
+        <div id="red" class="button"><button> Red </button></div>
+        <div id="blue" class="button"><button> Blue </button></div>
+        <div id="black" class="button"><button> Black </button></div>
+        <div id="cyan" class="button"><button> Cyan </button></div>
+    </div>
+    <script type="text/javascript" src="one.js"></script>
+</body>
+</html>
