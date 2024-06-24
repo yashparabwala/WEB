@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BMI Calculator</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        #value-head{
+            margin-top: 5px;
+        }
+        body{
+            background-color: #7EA8BE;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-items: center;
+            gap: 10px;
+            padding: 20px;
+
+        }
+        h1 {
+            text-align: center;
+            color: #28536B;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            margin: 20px;
+        }
+        #main-p{
+            font-weight: 600;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+        .cat-class{
+            color: #1F271B;
+        }
+        form{
+            display: flex;
+            flex-direction: column;
+            align-items: start;
+            justify-items: center;
+            padding: 5px;
+            /* margin-top: 10px; */
+            gap: 2px;
+        }
+        button{
+            background-color: #8EA8BF;
+            padding: 2px;
+            border-radius: 5px;
+            margin: 3px;
+        }
+        #result{
+            color: #F7F7FF;
+            font-size: larger;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            background-color: #495867;
+            height: 25px;
+            width: 400px;
+            text-align: center;
+            margin: 8px;
+        }
+        #main{
+            background-color: aliceblue;
+            padding: 15px;
+            border-radius: 5px;
+            width: 500px;
+            height: 360px;
+            margin-top: 90px;
+        }
+        #height , #weight{
+            margin: 1px;
+        }
+        #weight{
+            width:165px;
+        }
+        
+    </style>
+</head>
+<body>
+    <div id="main">
+        <h1>BMI Calculator</h1>
+        <hr>
+        <p id="value-head">Enter value</p>
+        <form id="bmi-form">
+            <p id="main-p">
+                <label for="height">Height (cm)</label>
+                <input type="text" id="height">
+                <br>
+                <label for="weight">Weight (kg)</label> <!-- Corrected the label to kg -->
+                <input type="text" id="weight">
+            </p>
+            <button type="submit">Submit</button>
+        </form>
+        <div id="result"></div>
+        <h3>BMI Categories:</h3>
+        <div id="cate">
+            <p class="cat-class">Underweight = &lt;18.5</p>
+            <p class="cat-class">Normal weight = 18.5–24.9</p>
+            <p class="cat-class">Overweight = 25–29.9</p>
+            <p class="cat-class">Obesity = BMI of 30 or greater</p>
+        </div>
+    </div>
+    <script src="bmi.js"></script>
+</body>
+</html>
